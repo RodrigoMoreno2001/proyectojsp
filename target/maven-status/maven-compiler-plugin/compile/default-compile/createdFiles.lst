@@ -1,0 +1,15 @@
+com\mycompany\proyectosjsp\entities\Tarea.class
+servlets\MostrarTareasServlet.class
+com\mycompany\proyectosjsp\entities\Proyecto.class
+servlets\LoginServlet.class
+servlets\EliminarTareaServlet.class
+servlets\InsertarProyectoServlet.class
+servlets\InsertarTareaServlet.class
+com\mycompany\proyectosjsp\DAO\TareaDAO.class
+com\mycompany\proyectosjsp\resources\JakartaEE8Resource.class
+com\mycompany\proyectosjsp\entities\Usuario.class
+servlets\MostrarProyectosServlet.class
+com\mycompany\proyectosjsp\util\HibernateUtil.class
+servlets\EliminarProyectosServlet.class
+com\mycompany\proyectosjsp\DAO\ProyectoDAO.class
+com\mycompany\proyectosjsp\JakartaRestConfiguration.class
