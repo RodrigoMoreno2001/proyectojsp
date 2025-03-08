@@ -37,11 +37,12 @@ public class MostrarTareasServlet extends HttpServlet {
                 request.getRequestDispatcher("/mostrarTareas.jsp").forward(request, response);
                 return;
             }
-            if (idProyectoStr != null && !idProyectoStr.isEmpty()) {
+            
+            if (idProyectoStr != null && !idProyectoStr.isEmpty())
                 idProyecto = Long.parseLong(idProyectoStr);
-            } else {
-                 idProyecto = proyectos.get(0).getId();
-            }
+            else 
+                idProyecto = proyectos.get(0).getId();
+            
 
             Proyecto proyecto = proyectoDAO.obtenerProyectoPorId(idProyecto);
             
