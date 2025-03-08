@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="css/styles2.css">
+        <link rel="stylesheet" type="text/css" href="css/styles3.css">
         <title>Login</title>
     </head>
     <body>
@@ -16,6 +16,12 @@
                 <input type="password" id="pass" name="pass" required>
                 <input class="boton" type="submit" value="Iniciar Sesion">
             </form>
+            <pre>
+
+            Credenciales por defecto:
+                -Usuario: user:user
+                -Admin: admin:admin
+            </pre>
         </div>
     </body>
 </html>

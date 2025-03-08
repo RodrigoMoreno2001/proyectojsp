@@ -21,15 +21,27 @@ import javax.servlet.http.HttpServletResponse;
 public class MostrarTareasServlet extends HttpServlet {
     
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        try {
-            Long idProyecto = 2L;
-            List<Tarea> tareas = null;
-            String idProyectoStr = request.getParameter("idProyecto");
-            
-            if (!(idProyectoStr == null || idProyectoStr.isEmpty())) Long.parseLong(idProyectoStr);
-            
+        try {        
             ProyectoDAO proyectoDAO = new ProyectoDAO();
             TareaDAO tareaDAO = new TareaDAO();
+            
+            List<Proyecto> proyectos= proyectoDAO.obtenerProyectos();
+
+            Long idProyecto;
+
+            List<Tarea> tareas = null;
+            
+            String idProyectoStr = request.getParameter("idProyecto");
+            
+            if(proyectos.isEmpty() || proyectos==null){
+                request.getRequestDispatcher("/mostrarTareas.jsp").forward(request, response);
+                return;
+            }
+            if (idProyectoStr != null && !idProyectoStr.isEmpty()) {
+                idProyecto = Long.parseLong(idProyectoStr);
+            } else {
+                 idProyecto = proyectos.get(0).getId();
+            }
 
             Proyecto proyecto = proyectoDAO.obtenerProyectoPorId(idProyecto);
             
@@ -37,6 +49,7 @@ public class MostrarTareasServlet extends HttpServlet {
                 tareas = tareaDAO.obtenerTareasPorProyecto(proyecto);
             
             request.setAttribute("tareas", tareas);
+            request.setAttribute("proyectos", proyectos);
 
             request.getRequestDispatcher("/mostrarTareas.jsp").forward(request, response);
         } catch (NumberFormatException e) {

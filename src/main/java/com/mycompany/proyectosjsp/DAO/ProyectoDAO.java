@@ -36,6 +36,14 @@ public class ProyectoDAO {
         }
     }  
     
+    public List<Proyecto> obtenerProyectos(){
+        
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            return session.createQuery("FROM Proyecto", Proyecto.class)
+                    .getResultList();
+        }
+    }
+    
     public Proyecto obtenerProyectoPorId(Long id){
         
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {

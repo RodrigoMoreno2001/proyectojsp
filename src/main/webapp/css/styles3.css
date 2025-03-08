@@ -20,8 +20,7 @@ body{
     flex-direction: column;
     background: linear-gradient(0deg, rgba(217,217,217,1) 0%, rgba(237,236,232,1) 32%, rgba(252,252,252,1) 100%);
     width:80vw;
-    min-height: 100vh;
-    
+    min-height: 100vh; 
 }
 
 h1{
@@ -59,14 +58,37 @@ input {
     background: #333;
     color: white;
     border: none;
+    margin: 10px;
     padding: 12px;
     border-radius: 5px;
     font-size: 16px;
+    text-decoration: none;
     cursor: pointer;
 }
 
 .boton:hover {
-    background: #0056b3;
+    background: #4f4f4f;
+}
+
+.botonEliminar{
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    padding:5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.horizontal{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.horizontal>*{
+    margin:5px;
+    height: 100%;
 }
 
 
@@ -97,4 +119,24 @@ input {
     color: #edece8;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background: #444;
+    padding: 10px;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #f2f2f2;
+}
 

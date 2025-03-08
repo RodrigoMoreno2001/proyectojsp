@@ -39,7 +39,6 @@ public class LoginServlet extends HttpServlet {
         
         if(usuario.equalsIgnoreCase("user") && pass.equalsIgnoreCase("user")) Usuario.nombre="user";
         else if(usuario.equalsIgnoreCase("admin") && pass.equalsIgnoreCase("admin")) Usuario.nombre="admin";
-        if(usuario.equalsIgnoreCase(" ") && pass.equalsIgnoreCase(" ")) Usuario.nombre="admin";
         return Usuario.nombre != null;
     }
 }
