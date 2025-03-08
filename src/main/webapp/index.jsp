@@ -9,7 +9,6 @@
     <body>
         <div id="container">
             <h2 class="titulo">Iniciar Sesión</h2>
-            
             <form action="LoginServlet" method="post">
                 <label for="usuario:">Usuario:</label>
                 <input type="text" id="usuario" name="usuario" required>
@@ -17,7 +16,6 @@
                 <input type="password" id="pass" name="pass" required>
                 <input class="boton" type="submit" value="Iniciar Sesion">
             </form>
-            
             <pre>
 
             Credenciales por defecto:

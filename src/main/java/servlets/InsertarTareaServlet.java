@@ -19,7 +19,7 @@ public class InsertarTareaServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        Long idProyecto = Long.parseLong(request.getParameter("idProyecto"));
+        Long idProyecto = Long.valueOf(request.getParameter("idProyecto"));
         String descripcion = request.getParameter("descripcion");
         String responsable = request.getParameter("responsable");
         LocalDate fechaInicio = LocalDate.parse(request.getParameter("fechaInicio"));

@@ -28,6 +28,6 @@ public class InsertarProyectoServlet extends HttpServlet {
         ProyectoDAO proyectoDAO = new ProyectoDAO();
         proyectoDAO.insertarProyecto(proyecto);
 
-        response.sendRedirect("/proyectosjsp/insertarProyectos.jsp");
+        response.sendRedirect("insertarProyectos.jsp");
     }
 }
